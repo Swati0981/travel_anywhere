@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bhromaon</title>
+
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Aleo:wght@400;700&family=Josefin+Sans:wght@400;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="styles/normalize.css" />
+  <link rel="stylesheet" href="styles/style.css" />
+</head>
+<body>
+  <div class="site-frame">
+    <header class="hero" id="top">
+      <img class="section-image" src="images/header.jpg" alt="" aria-hidden="true" />
+
+      <div class="hero__overlay">
+        <h1 class="sr-only">Bhromaon</h1>
+        <p class="sr-only">Safe Travel Anywhere</p>
+
+        <form class="hero__form" action="#" method="get">
+          <label class="sr-only" for="destination">Search your travel destination</label>
+          <input
+            id="destination"
+            name="destination"
+            type="text"
+            required
+            minlength="3"
+            placeholder=""
+            aria-label="Search your travel destination"
+          />
+          <button type="submit" aria-label="Search"></button>
+        </form>
+
+        <a class="hero__scroll" href="#why" aria-label="Scroll down"></a>
+
+        <nav class="hero__nav" aria-label="Main navigation">
+          <a class="hero__brand" href="#top" aria-label="Bhromaon home"></a>
+
+          <ul class="hero__nav-list">
+            <li><a href="#why" aria-label="Who we are"></a></li>
+            <li><a href="#works" aria-label="What we do"></a></li>
+            <li><a href="#book" aria-label="Travel with us"></a></li>
+            <li><a href="#footer" aria-label="Contact us"></a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="why" id="why" aria-labelledby="why-title">
+        <img class="section-image" src="images/us.jpg" alt="" aria-hidden="true" />
+
+        <div class="why__overlay">
+          <h2 id="why-title" class="sr-only">Why Choose Us</h2>
+          <p class="sr-only">
+            Tion and dislike men who are so beguiled and demoralized by desire
+            by the charms of pleasure of the moment, so blinded by desire, that
+            they cannot foresee.
+          </p>
+          <p class="sr-only">
+            Dislike men who are so beguiled and demoralized by the charms of
+            pleasure of the moment, so blinded by desire.
+          </p>
+
+          <a class="why__button" href="#book" aria-label="Explore places"></a>
+        </div>
+      </section>
+
+      <section class="works" id="works" aria-labelledby="works-title">
+        <img class="section-image" src="images/works.jpg" alt="" aria-hidden="true" />
+
+        <div class="works__overlay">
+          <h2 id="works-title" class="sr-only">How it works</h2>
+
+          <div class="works__steps">
+            <article>
+              <h3 class="sr-only">Search Places</h3>
+            </article>
+            <article>
+              <h3 class="sr-only">Select Places</h3>
+            </article>
+            <article>
+              <h3 class="sr-only">Book and Enjoy</h3>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="bookings" id="book" aria-labelledby="bookings-title">
+        <img class="section-image" src="images/section.jpg" alt="" aria-hidden="true" />
+
+        <div class="bookings__overlay">
+          <h2 id="bookings-title" class="sr-only">Travel packages</h2>
+
+          <article class="booking booking--one">
+            <h3 class="sr-only">Grand Spain Madrid</h3>
+            <p class="sr-only">Spain</p>
+            <p class="sr-only">
+              But I must explain to you how all this mistaken idea of account to
+              denouncing pleasure and praising pain was account born and I
+              account will give you a complete account of the system.
+            </p>
+            <a class="booking__button booking__button--one" href="#" aria-label="Book now first destination"></a>
+          </article>
+
+          <article class="booking booking--two">
+            <h3 class="sr-only">Grand Spain Madrid</h3>
+            <p class="sr-only">Spain</p>
+            <p class="sr-only">
+              But I must explain to you how all this mistaken idea of account to
+              denouncing pleasure and praising pain was account born and I
+              account will give you a complete account of the system.
+            </p>
+            <a class="booking__button booking__button--two" href="#" aria-label="Book now second destination"></a>
+          </article>
+        </div>
+      </section>
+
+      <section class="testimonial" aria-labelledby="testimonial-title">
+        <img class="section-image" src="images/testimonial.jpg" alt="" aria-hidden="true" />
+
+        <div class="testimonial__overlay">
+          <h2 id="testimonial-title" class="sr-only">What Our Tourist Say</h2>
+          <article class="testimonial__content">
+            <h3 class="sr-only">Sam Sumon</h3>
+            <p class="sr-only">
+              But I must explain to you how all this mistaken idea of account to
+              denouncing pleasure and praising pain was account born and I
+              account will give you a complete account of the system.
+            </p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer" id="footer">
+      <img class="section-image" src="images/footer.jpg" alt="" aria-hidden="true" />
+
+      <div class="footer__overlay">
+        <h2 class="sr-only">Bhromaon</h2>
+        <p class="sr-only">Safe Travel Anywhere</p>
+
+        <ul class="footer__socials" aria-label="Social media links">
+          <li><a href="#" aria-label="Facebook"></a></li>
+          <li><a href="#" aria-label="Twitter"></a></li>
+          <li><a href="#" aria-label="LinkedIn"></a></li>
+          <li><a href="#" aria-label="YouTube"></a></li>
+          <li><a href="#" aria-label="Pinterest"></a></li>
+        </ul>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

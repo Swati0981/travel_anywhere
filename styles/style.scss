@@ -1,0 +1,405 @@
+$white: #ffffff;
+$black: #000000;
+$accent: #5474fd;
+$accent-hover: rgba(84, 116, 253, 0.55);
+$nav-hover: rgba(255, 255, 255, 0.14);
+$scroll-hover: rgba(255, 255, 255, 0.1);
+$transition: 0.2s ease;
+
+@mixin fill {
+  position: absolute;
+  inset: 0;
+}
+
+@mixin hotspot {
+  display: block;
+  border-radius: 4px;
+  transition: all $transition;
+}
+
+@mixin hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  white-space: nowrap;
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: $black;
+  color: $white;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+a,
+button,
+input {
+  transition: all $transition;
+}
+
+.site-frame {
+  width: 100%;
+  margin: 0;
+  background: $black;
+}
+
+.section-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.hero,
+.why,
+.works,
+.bookings,
+.testimonial,
+.footer {
+  position: relative;
+  width: 100%;
+}
+
+.hero__overlay,
+.why__overlay,
+.works__overlay,
+.bookings__overlay,
+.testimonial__overlay,
+.footer__overlay {
+  @include fill;
+}
+
+.sr-only {
+  @include hidden;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+  outline: 2px solid $white;
+  outline-offset: 2px;
+}
+
+/* HERO */
+.hero__form {
+  position: absolute;
+  top: 36.15%;
+  left: 31.7%;
+  width: 41.55%;
+  height: 7.35%;
+  display: grid;
+  grid-template-columns: 1fr 21.55%;
+
+  input {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    background: transparent;
+    color: transparent;
+    caret-color: transparent;
+
+    &:focus {
+      background: rgba(255, 255, 255, 0.96);
+      color: #333333;
+      caret-color: #333333;
+    }
+  }
+
+  button {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    background: transparent;
+    color: transparent;
+    cursor: pointer;
+
+    &:hover,
+    &:focus-visible {
+      background: rgba(84, 116, 253, 0.3);
+      color: $white;
+    }
+  }
+}
+
+.hero__scroll {
+  @include hotspot;
+  position: absolute;
+  left: 46.15%;
+  top: 57.2%;
+  width: 8.1%;
+  height: 6.7%;
+
+  &:hover {
+    background: $scroll-hover;
+  }
+}
+
+.hero__nav {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 16.55%;
+}
+
+.hero__brand {
+  @include hotspot;
+  position: absolute;
+  left: 18.5%;
+  top: 60.5%;
+  width: 14.2%;
+  height: 25%;
+
+  &:hover {
+    background: $nav-hover;
+  }
+}
+
+.hero__nav-list {
+  position: absolute;
+  right: 13.7%;
+  top: 60%;
+  width: 36%;
+  height: 25%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  gap: 2.8%;
+
+  li {
+    flex: 1;
+  }
+
+  a {
+    @include hotspot;
+    width: 100%;
+    height: 100%;
+
+    &:hover {
+      background: $nav-hover;
+    }
+  }
+}
+
+/* WHY */
+.why__button {
+  @include hotspot;
+  position: absolute;
+  left: 21.2%;
+  top: 63.2%;
+  width: 13.4%;
+  height: 12.2%;
+
+  &:hover {
+    background: $accent-hover;
+  }
+}
+
+/* WORKS */
+.works__steps {
+  @include fill;
+
+  article:nth-child(1) {
+    position: absolute;
+    left: 15.8%;
+    top: 28%;
+    width: 18%;
+    height: 45%;
+  }
+
+  article:nth-child(2) {
+    position: absolute;
+    left: 40.9%;
+    top: 28%;
+    width: 18%;
+    height: 45%;
+  }
+
+  article:nth-child(3) {
+    position: absolute;
+    left: 66%;
+    top: 28%;
+    width: 18%;
+    height: 45%;
+  }
+}
+
+/* BOOKINGS */
+.booking__button {
+  @include hotspot;
+  position: absolute;
+
+  &:hover {
+    background: $accent-hover;
+  }
+}
+
+.booking__button--one {
+  left: 16.95%;
+  top: 27.95%;
+  width: 9.9%;
+  height: 4.15%;
+}
+
+.booking__button--two {
+  left: 54.6%;
+  top: 76.3%;
+  width: 9.95%;
+  height: 4.15%;
+}
+
+/* FOOTER */
+.footer__socials {
+  position: absolute;
+  left: 47.15%;
+  top: 76.2%;
+  width: 6.9%;
+  height: 10.8%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  gap: 5%;
+
+  li {
+    flex: 1;
+  }
+
+  a {
+    @include hotspot;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+
+    &:hover {
+      background: rgba(84, 116, 253, 0.45);
+    }
+  }
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .hero__form {
+    top: 34.8%;
+    left: 18%;
+    width: 64%;
+    height: 9%;
+  }
+
+  .hero__scroll {
+    left: 43%;
+    width: 14%;
+    height: 8%;
+  }
+
+  .hero__brand {
+    left: 6.5%;
+    width: 22%;
+  }
+
+  .hero__nav-list {
+    right: 4%;
+    width: 61%;
+  }
+
+  .why__button {
+    left: 10%;
+    top: 67%;
+    width: 22%;
+    height: 10%;
+  }
+
+  .booking__button--one {
+    left: 10.8%;
+    top: 28.3%;
+    width: 16%;
+    height: 4.8%;
+  }
+
+  .booking__button--two {
+    left: 55%;
+    top: 76.8%;
+    width: 16%;
+    height: 4.8%;
+  }
+
+  .footer__socials {
+    left: 43.5%;
+    width: 13%;
+  }
+}
+
+@media (max-width: 700px) {
+  .hero__form {
+    top: 33.8%;
+    left: 12%;
+    width: 76%;
+    height: 10%;
+    grid-template-columns: 1fr 24%;
+  }
+
+  .hero__brand {
+    left: 3%;
+    width: 26%;
+  }
+
+  .hero__nav-list {
+    right: 2%;
+    width: 68%;
+    gap: 2%;
+  }
+
+  .why__button {
+    left: 8%;
+    top: 69%;
+    width: 26%;
+    height: 10%;
+  }
+
+  .booking__button--one {
+    left: 9.8%;
+    top: 29%;
+    width: 18%;
+    height: 5%;
+  }
+
+  .booking__button--two {
+    left: 55%;
+    top: 77%;
+    width: 18%;
+    height: 5%;
+  }
+
+  .footer__socials {
+    left: 41%;
+    width: 18%;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero__form {
+    left: 8%;
+    width: 84%;
+  }
+
+  .hero__nav-list {
+    width: 70%;
+  }
+}
