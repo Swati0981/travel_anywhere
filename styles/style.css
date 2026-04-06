@@ -354,4 +354,8 @@ input:focus-visible {
   .hero__nav-list {
     width: 70%;
   }
+  -- Fix Search button hover --
+  .search-box button:hover {
+  background-color: #3c5be0;
+}
 }
