@@ -358,4 +358,9 @@ input:focus-visible {
   .search-box button:hover {
   background-color: #3c5be0;
 }
+-- Fix explore book button --
+.explore-btn:hover,
+.book-btn:hover {
+  background-color: #3c5be0;
+}
 }
